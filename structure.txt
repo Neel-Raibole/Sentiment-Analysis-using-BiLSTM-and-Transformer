@@ -1,27 +1,25 @@
-Folder PATH listing for volume Windows
-Volume serial number is D091-F054
-C:.
-¦   .gitattributes
-¦   ReadMe.docx
-¦   README.md
-¦   structure.txt
-¦   yelp_dataset_test.csv
-¦   yelp_dataset_train.csv
-¦   
+Folder Structure
+Â¦   .gitattributes
+Â¦   ReadMe.docx
+Â¦   README.md
+Â¦   structure.txt
+Â¦   yelp_dataset_test.csv
+Â¦   yelp_dataset_train.csv
+Â¦   
 +---DistilBERT
-¦       config.json
-¦       DistilBERT_Additional_Testing.ipynb
-¦       distilbert_hpo(1).db
-¦       distilbert_hpo.db
-¦       DistilBERT_HPO.ipynb
-¦       DistilBERT_Testing.ipynb
-¦       DistilBERT_Training.ipynb
-¦       model.safetensors
-¦       optuna_study.db
-¦       special_tokens_map.json
-¦       tokenizer_config.json
-¦       vocab.txt
-¦       
+Â¦       config.json
+Â¦       DistilBERT_Additional_Testing.ipynb
+Â¦       distilbert_hpo(1).db
+Â¦       distilbert_hpo.db
+Â¦       DistilBERT_HPO.ipynb
+Â¦       DistilBERT_Testing.ipynb
+Â¦       DistilBERT_Training.ipynb
+Â¦       model.safetensors
+Â¦       optuna_study.db
+Â¦       special_tokens_map.json
+Â¦       tokenizer_config.json
+Â¦       vocab.txt
+Â¦       
 +---LSTM
         bilstm_model.pth
         LSTM_Additional_Testing.ipynb
