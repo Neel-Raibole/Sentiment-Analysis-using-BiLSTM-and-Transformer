@@ -61,7 +61,7 @@ This section walks through my end-to-end workflow—from raw Yelp reviews to fin
   1. Hugging Face DistilBertTokenizerFast (base-uncased) → input_ids + attention_mask.
   2. Auto-add special tokens ([CLS], [SEP]) + truncate/pad to 512 tokens.
 
-### 4.3 Hyperparameter Optimization (Optuna) ([BiLSTM HPO File Hyperlink], [DistilBERT HPO File Hyperlink])
+### 4.3 Hyperparameter Optimization (Optuna) ([BiLSTM HPO File](https://github.com/Neel-Raibole/Sentiment-Analysis-using-BiLSTM-and-Transformer/blob/main/LSTM/LSTM_HPO.ipynb), [DistilBERT HPO File](https://github.com/Neel-Raibole/Sentiment-Analysis-using-BiLSTM-and-Transformer/blob/main/DistilBERT/DistilBERT_HPO.ipynb))
 
 - **Common Setup**
   - Train on train_small, evaluate on val_small.
@@ -78,11 +78,11 @@ This section walks through my end-to-end workflow—from raw Yelp reviews to fin
 
 ### 4.4 Final Model Training
 
-- **BiLSTM** ([BiLSTM Training File Hyperlink])
+- **BiLSTM** ([BiLSTM Training File](https://github.com/Neel-Raibole/Sentiment-Analysis-using-BiLSTM-and-Transformer/blob/main/LSTM/LSTM_Training.ipynb))
   1. Instantiate BiLSTMClassifier with tuned units, LR, weight decay.
   2. Train 10 epochs on 420K train set; track train/val loss, acc, precision, recall, F1 per epoch.
   3. Save bilstm_model.pth + tokenizer.pkl.
-- **DistilBERT** ([DistilBERT Training File Hyperlink])
+- **DistilBERT** ([DistilBERT Training File](https://github.com/Neel-Raibole/Sentiment-Analysis-using-BiLSTM-and-Transformer/blob/main/DistilBERT/DistilBERT_Training.ipynb))
   1. Load DistilBertForSequenceClassification with num_labels=3.
   2. Configure TrainingArguments using tuned hyperparameters, 500 warmup steps, fp16, epoch checkpointing.
   3. Train 3 epochs on 420K train set; track metrics via a TrainerCallback.
@@ -90,7 +90,7 @@ This section walks through my end-to-end workflow—from raw Yelp reviews to fin
 
 ### 4.5 Evaluation & Post-Hoc Analyses
 
-- **Held-out Test Evaluation** ([BiLSTM Test File Hyperlink], [DistilBERT Test File Hyperlink])
+- **Held-out Test Evaluation** ([BiLSTM Test File](https://github.com/Neel-Raibole/Sentiment-Analysis-using-BiLSTM-and-Transformer/blob/main/LSTM/LSTM_Testing.ipynb), [DistilBERT Test File](https://github.com/Neel-Raibole/Sentiment-Analysis-using-BiLSTM-and-Transformer/blob/main/DistilBERT/DistilBERT_Testing.ipynb))
   - Tokenize/pad the 30K reviews; batch inference → compute accuracy, precision, recall, F1 (weighted); plot confusion matrix.
 - **Short vs. Long Reviews**
   - Split test set by word count threshold (≤50 vs. >50 words); evaluate both subsets separately and visualize accuracy differences.
