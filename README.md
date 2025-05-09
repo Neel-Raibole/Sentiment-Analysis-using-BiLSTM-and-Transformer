@@ -103,6 +103,8 @@ This section walks through my end-to-end workflow—from raw Yelp reviews to fin
 
 ### 5.1 What Is a Bidirectional LSTM?
 
+<img src="https://github.com/Neel-Raibole/Sentiment-Analysis-using-BiLSTM-and-Transformer/blob/main/images/BiLSTM%20Model.png" alt="BiLSTM - Model Architecture" width="1000"/>
+
 A Bidirectional Long Short-Term Memory (BiLSTM) network is an extension of the standard LSTM a type of recurrent neural network (RNN) designed to model sequential data where two LSTM layers process the sequence in opposite directions:
 
 1. **Forward LSTM**
@@ -173,6 +175,8 @@ This architecture strikes a balance between capacity (through bidirectional recu
 ## 6. Explaining DistilBERT
 
 ### 6.1 What Is DistilBERT?
+
+<img src="https://github.com/Neel-Raibole/Sentiment-Analysis-using-BiLSTM-and-Transformer/blob/main/images/DistilBERT%20Model.png" alt="DistilBERT - Model Architecture" width="1000"/>
 
 DistilBERT is a lightweight, distilled version of the original BERT model designed to retain most of BERT's language understanding capabilities while being faster and smaller. It achieves this through knowledge distillation, where a smaller "student" model learns to mimic the outputs of a larger "teacher" model.
 
